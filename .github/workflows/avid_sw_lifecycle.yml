@@ -19,6 +19,3 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Run Java Application
       run: java -jar target/Git-testing-jar-with-dependencies.jar
-      with:
-         github_token: ${{ secrets.MY_GIT_TOKEN }}
-         branch: avid
