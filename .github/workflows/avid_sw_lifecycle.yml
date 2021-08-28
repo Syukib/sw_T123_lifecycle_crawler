@@ -19,7 +19,7 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Run Java Application
       run: java -jar target/Git-testing-jar-with-dependencies.jar
- - name: Commit files
+    - name: Commit files
       run: |
          git config --local user.email "sample@gmail.com"
          git config --local user.name "syukib"
