@@ -38,11 +38,17 @@ public class htmlunit_test {
 	        if (!Files.exists(lifecycle_result_data)) {
 	            Files.createFile(lifecycle_result_data);
 	        }
+	        Files.write(lifecycle_result_data, "\"".getBytes(), StandardOpenOption.APPEND);
 	        Files.write(lifecycle_result_data, product_model.getBytes(), StandardOpenOption.APPEND);
+	        Files.write(lifecycle_result_data, "\"".getBytes(), StandardOpenOption.APPEND);
 	        Files.write(lifecycle_result_data, " , ".getBytes(), StandardOpenOption.APPEND);
+	        Files.write(lifecycle_result_data, "\"".getBytes(), StandardOpenOption.APPEND);
 	        Files.write(lifecycle_result_data, final_sale_date.getBytes(), StandardOpenOption.APPEND);
+	        Files.write(lifecycle_result_data, "\"".getBytes(), StandardOpenOption.APPEND);
 	        Files.write(lifecycle_result_data, " , ".getBytes(), StandardOpenOption.APPEND);
+                Files.write(lifecycle_result_data, "\"".getBytes(), StandardOpenOption.APPEND);
 	        Files.write(lifecycle_result_data, end_of_support_date.getBytes(), StandardOpenOption.APPEND);
+	        Files.write(lifecycle_result_data, "\"".getBytes(), StandardOpenOption.APPEND);
 	        Files.write(lifecycle_result_data, "\n".getBytes(), StandardOpenOption.APPEND);
 		}
 		
@@ -66,17 +72,17 @@ public class htmlunit_test {
 	        if (!Files.exists(lifecycle_result_data)) {
 	            Files.createFile(lifecycle_result_data);
 	        }
-	        Files.write(lifecycle_result_data, "\"\"".getBytes(), StandardOpenOption.APPEND);
+	        Files.write(lifecycle_result_data, "\"".getBytes(), StandardOpenOption.APPEND);
 	        Files.write(lifecycle_result_data, product_model_2.getBytes(), StandardOpenOption.APPEND);
-	        Files.write(lifecycle_result_data, "\"\"".getBytes(), StandardOpenOption.APPEND);
+	        Files.write(lifecycle_result_data, "\"".getBytes(), StandardOpenOption.APPEND);
 	        Files.write(lifecycle_result_data, " , ".getBytes(), StandardOpenOption.APPEND);
-	        Files.write(lifecycle_result_data, "\"\"".getBytes(), StandardOpenOption.APPEND);
+	        Files.write(lifecycle_result_data, "\"".getBytes(), StandardOpenOption.APPEND);
 	        Files.write(lifecycle_result_data, final_sale_date_2.getBytes(), StandardOpenOption.APPEND);
-	        Files.write(lifecycle_result_data, "\"\"".getBytes(), StandardOpenOption.APPEND);
+	        Files.write(lifecycle_result_data, "\"".getBytes(), StandardOpenOption.APPEND);
 	        Files.write(lifecycle_result_data, " , ".getBytes(), StandardOpenOption.APPEND);
-                Files.write(lifecycle_result_data, "\"\"".getBytes(), StandardOpenOption.APPEND);
+                Files.write(lifecycle_result_data, "\"".getBytes(), StandardOpenOption.APPEND);
 	        Files.write(lifecycle_result_data, end_of_support_date_2.getBytes(), StandardOpenOption.APPEND);
-	        Files.write(lifecycle_result_data, "\"\"".getBytes(), StandardOpenOption.APPEND);
+	        Files.write(lifecycle_result_data, "\"".getBytes(), StandardOpenOption.APPEND);
 	        Files.write(lifecycle_result_data, "\n".getBytes(), StandardOpenOption.APPEND);
 		}
 	}
