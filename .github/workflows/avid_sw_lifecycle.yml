@@ -1,4 +1,4 @@
-name: avid sw lifecycle - Java CI with Maven
+name: avid sw lifecycle Java CI with Maven
 on:
   push:
     branches: [ avid ]
