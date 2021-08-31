@@ -14,7 +14,6 @@ import com.gargoylesoftware.htmlunit.html.HtmlPage;
 public class htmlunit_test {
 	//for github actions testing
 	private static Path lifecycle_result_data = Paths.get("lifecycle_result_data.csv");
-	System.out.println(lifecycle_result_data.toString());
 	
 	public static void main(String[] args) throws IOException {
         	String url = "https://avid.secure.force.com/pkb/articles/en_US/faq/End-of-support-dates";
@@ -24,7 +23,7 @@ public class htmlunit_test {
 		String fsd_date_rule = "//span/table/tbody/tr/td[3]";
 		String end_of_support_date = "";
 		String eos_date_rule = "//span/table/tbody/tr/td[4]";
-		
+		System.out.println(lifecycle_result_data.toString());
 		
 		HtmlPage EntrancePage = CrawlerUtils.getPage(url);
 		List <HtmlElement> infoListEle_pm = (List <HtmlElement>)  EntrancePage.getByXPath(pm_rule);
