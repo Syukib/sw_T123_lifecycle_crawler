@@ -14,7 +14,7 @@ import com.gargoylesoftware.htmlunit.html.HtmlPage;
 public class htmlunit_test {
 	//for github actions testing
 	private static Path lifecycle_result_data = Paths.get("lifecycle_result_data.csv");
-	System.out.println(Path.toString());
+	System.out.println(lifecycle_result_data.toString());
 	
 	public static void main(String[] args) throws IOException {
         	String url = "https://avid.secure.force.com/pkb/articles/en_US/faq/End-of-support-dates";
