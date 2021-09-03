@@ -43,11 +43,17 @@ public class htmlunit_test {
 	        if (!Files.exists(lifecycle_result_data)) {
 	            Files.createFile(lifecycle_result_data);
 	        }
+		Files.write(lifecycle_result_data, "\"".getBytes(), StandardOpenOption.APPEND);
 	        Files.write(lifecycle_result_data, product.getBytes(), StandardOpenOption.APPEND);
+		Files.write(lifecycle_result_data, "\"".getBytes(), StandardOpenOption.APPEND);
 	        Files.write(lifecycle_result_data, " , ".getBytes(), StandardOpenOption.APPEND);
+		Files.write(lifecycle_result_data, "\"".getBytes(), StandardOpenOption.APPEND);
 	        Files.write(lifecycle_result_data, release.getBytes(), StandardOpenOption.APPEND);
+		Files.write(lifecycle_result_data, "\"".getBytes(), StandardOpenOption.APPEND);
 	        Files.write(lifecycle_result_data, " , ".getBytes(), StandardOpenOption.APPEND);
+		Files.write(lifecycle_result_data, "\"".getBytes(), StandardOpenOption.APPEND);
 	        Files.write(lifecycle_result_data, end_of_support_date.getBytes(), StandardOpenOption.APPEND);
+		Files.write(lifecycle_result_data, "\"".getBytes(), StandardOpenOption.APPEND);
 	        Files.write(lifecycle_result_data, "\n".getBytes(), StandardOpenOption.APPEND);
 		}  
 
