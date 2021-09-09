@@ -31,16 +31,18 @@ public class htmlunit_test {
 		List <HtmlElement> infoListEle_rel = (List <HtmlElement>)  EntrancePage.getByXPath(rel_rule);
 		List <HtmlElement> infoListEle_eos = (List <HtmlElement>)  EntrancePage.getByXPath(eos_date_rule);
 		
-		for (int i = 0; i < infoListEle_eos.size(); i++) {
-			
-			product = infoListEle_pro.get(i).getTextContent().trim().replaceAll("\r|\n", "");
-			release = infoListEle_rel.get(i).getTextContent().trim().replaceAll("\r|\n", "");
-			end_of_support_date = infoListEle_eos.get(i).getTextContent().trim().replaceAll("\r|\n", "");
-			System.out.println("[ " + product + " ][ " +  release + " ][ " + end_of_support_date + " ]");
 	        if (Files.exists(lifecycle_result_data)) {
 		    Files.delete(lifecycle_result_data);
 	            Files.createFile(lifecycle_result_data);
 	        }
+		
+		for (int i = 0; i < infoListEle_eos.size(); i++) {
+			
+		product = infoListEle_pro.get(i).getTextContent().trim().replaceAll("\r|\n", "");
+		release = infoListEle_rel.get(i).getTextContent().trim().replaceAll("\r|\n", "");
+		end_of_support_date = infoListEle_eos.get(i).getTextContent().trim().replaceAll("\r|\n", "");
+		System.out.println("[ " + product + " ][ " +  release + " ][ " + end_of_support_date + " ]");
+
                 Files.write(lifecycle_result_data, "\"".getBytes(), StandardOpenOption.APPEND);
 	        Files.write(lifecycle_result_data, product.getBytes(), StandardOpenOption.APPEND);
                 Files.write(lifecycle_result_data, "\"".getBytes(), StandardOpenOption.APPEND);
