@@ -37,7 +37,8 @@ public class htmlunit_test {
 			release = infoListEle_rel.get(i).getTextContent().trim().replaceAll("\r|\n", "");
 			end_of_support_date = infoListEle_eos.get(i).getTextContent().trim().replaceAll("\r|\n", "");
 			System.out.println("[ " + product + " ][ " +  release + " ][ " + end_of_support_date + " ]");
-	        if (!Files.exists(lifecycle_result_data)) {
+	        if (Files.exists(lifecycle_result_data)) {
+		    Files.delete(lifecycle_result_data);
 	            Files.createFile(lifecycle_result_data);
 	        }
                 Files.write(lifecycle_result_data, "\"".getBytes(), StandardOpenOption.APPEND);
